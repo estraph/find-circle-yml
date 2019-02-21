@@ -10,11 +10,13 @@ A command-line tool for finding which repositories in your GitHub organization o
 
 **GitHub**
 
-    $ GITHUB_ORGANIZATION=<your github org> GITHUB_USER=<your github user> GITHUB_ACCESS_TOKEN=<your personal access token> find-circle-yml
+    $ CIRCLECI_TOKEN=<circle-token> GITHUB_ORGANIZATION=<your github org> GITHUB_USER=<your github user> GITHUB_ACCESS_TOKEN=<your personal access token> find-circle-yml
     https://github.com/your-org/your-repo/blob/master/circle.yml
     https://github.com/your-org/another-repo/blob/master/circle.yml
 
 **Bitbucket**
+
+PROBABLY BROKEN ON THIS FORK
 
     $ BITBUCKET_TEAM=<your bitbucket team> BITBUCKET_USER=<your bitbucket user> BITBUCKET_APP_PASSWORD=<your bitbucket password> find-circle-yml
     https://bitbucket.org/your-team/your-repo/src/bb030e9dcee6218d0ce521b7312e60e5cc5db4a3/circle.yml
