@@ -7,6 +7,7 @@ module FindCircleYml
         GITHUB_USER
         GITHUB_ACCESS_TOKEN
         GITHUB_ORGANIZATION
+        CIRCLECI_TOKEN
       ].freeze
 
       attr_reader :environment

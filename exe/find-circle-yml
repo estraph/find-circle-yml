@@ -17,9 +17,9 @@ provided_configurations.each do |configuration|
   if configuration.valid?
     service = configuration.service
     service.repositories.each do |repository|
-      if (configuration_file = service.configuration_file(repository))
-        puts configuration_file.url
-      end
+      configuration_files = service.configuration_files(repository)
+      puts "#{repository.url} is using default (v1) config" unless configuration_files.any?{ |c| c.present }
+      configuration_files.select(&:present).each{ |c| puts "#{repository.url}/blob/master/#{c.path} is not using v2 config" unless c.version == 2 }
     end
   else
     STDERR.puts configuration.error_message
